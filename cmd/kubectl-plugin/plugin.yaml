@@ -1,0 +1,15 @@
+name: "catalog"
+shortDesc: "Commands for interacting with the service catalog"
+longDesc: >
+  Eventually
+command: ../../bin/kubectl-plugin
+tree:
+  - name: "bind"
+    shortDesc: "Binds something"
+    command: ../../bin/kubectl-plugin bind
+  - name: "unbind"
+    shortDesc: "Unbinds something"
+    command: ../../bin/kubectl-plugin unbind
+  - name: "list"
+    shortDesc: "List stuff"
+    command: ../../bin/kubectl-plugin list

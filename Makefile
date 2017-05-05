@@ -108,6 +108,10 @@ controller-manager: .init $(BINDIR)/controller-manager
 $(BINDIR)/controller-manager: .generate_files cmd/controller-manager $(NEWEST_GO_FILE)
 	$(DOCKER_CMD) $(GO_BUILD) -o $@ $(SC_PKG)/cmd/controller-manager
 
+kubectl-plugin: .init $(BINDIR)/kubectl-plugin
+$(BINDIR)/kubectl-plugin: .generate_files cmd/kubectl-plugin $(NEWEST_GO_FILE)
+	$(DOCKER_CMD) $(GO_BUILD) -o $@ $(SC_PKG)/cmd/kubectl-plugin
+
 # This section contains the code generation stuff
 #################################################
 .generate_exes: $(BINDIR)/defaulter-gen \
